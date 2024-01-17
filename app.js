@@ -10,6 +10,10 @@ app.use(express.json());
 app.use(cors());
 app.use(router);
 
+app.get("/", (req, res) => {
+  res.send("Corriendo servidor!");
+});
+
 app.listen(port, () => {
   console.log(`Server is listening on port: ${port}`);
 });
